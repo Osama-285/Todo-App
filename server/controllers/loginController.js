@@ -1,5 +1,5 @@
 // loginController.js
-const User = require("../model/user"); // Adjust the path accordingly
+const User = require("../models/user"); // Adjust the path accordingly
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 

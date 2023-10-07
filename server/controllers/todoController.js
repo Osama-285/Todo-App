@@ -1,5 +1,5 @@
 // todoController.js
-const Todo = require("../model/todo");
+const Todo = require("../models/todo");
 
 const todoController = {
   // Get all TODOs of a specific user
