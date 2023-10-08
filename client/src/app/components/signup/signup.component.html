@@ -1,1 +1,57 @@
-<p>signup works!</p>
+<div class="container mt-5 box-design">
+  <h2>Signup</h2>
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        formControlName="username"
+      />
+      <div class="text-danger">
+        {{ getErrorMessage("username") }}
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        formControlName="email"
+      />
+      <div class="text-danger">
+        {{ getErrorMessage("email") }}
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        formControlName="password"
+      />
+      <div class="text-danger">
+        {{ getErrorMessage("password") }}
+      </div>
+    </div>
+    <div class="row">
+      <button
+        type="button"
+        class="col-md-6 btn btn-success"
+        (click)="onSubmit()"
+      >
+        Signup
+      </button>
+      <button
+        type="submit"
+        class="col-md-6 btn btn-primary"
+        (click)="onLogin()"
+      >
+        Login <i class="fa fa-sign-in" aria-hidden="true"></i>
+      </button>
+    </div>
+  </form>
+</div>

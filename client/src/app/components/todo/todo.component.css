@@ -1,0 +1,21 @@
+.todo-content-alignment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo-text {
+  font-size: 20px;
+  font-weight: 600;
+}
+.w-30 {
+  width: 30%;
+}
+.w-60 {
+  width: 60%;
+}
+.form-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+  font-weight: 600;
+}

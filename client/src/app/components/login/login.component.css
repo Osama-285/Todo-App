@@ -1,0 +1,15 @@
+.container {
+  max-width: 400px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.text-danger {
+  color: red;
+}
+
+.text-danger input {
+  border-color: red;
+}

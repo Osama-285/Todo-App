@@ -1,1 +1,42 @@
-<p>login works!</p>
+<!-- login.component.html -->
+<div class="container mt-5 box-design">
+  <h2>Login</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="Email" class="form-label">Email</label>
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        formControlName="email"
+      />
+      <div class="text-danger">
+        {{ getErrorMessage("Email") }}
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        formControlName="password"
+      />
+      <div class="text-danger">
+        {{ getErrorMessage("password") }}
+      </div>
+    </div>
+    <div class="row">
+      <button type="submit" class="col-md-6 btn btn-primary">
+        Login <i class="fa fa-sign-in" aria-hidden="true"></i>
+      </button>
+      <button
+        type="button"
+        class="col-md-6 btn btn-success"
+        (click)="navigateToSignup()"
+      >
+        Signup
+      </button>
+    </div>
+  </form>
+</div>
